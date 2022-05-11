@@ -98,5 +98,5 @@
 </div>
 
 <div class="absolute bottom-0 bg-black w-full text-center py-2 opacity-50">
-	<a href="https://github.com/notnavindu/clickup-time-tracker"> Github </a>
+	<a href="https://github.com/notnavindu/clickup-time-summary"> Github </a>
 </div>

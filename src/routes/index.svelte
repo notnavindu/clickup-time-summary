@@ -51,7 +51,7 @@
 	};
 </script>
 
-<div class="w-full max-w-lg m-auto py-12 px-3">
+<div class="w-full min-h-screen max-w-lg m-auto py-12 px-3">
 	<input
 		type="text"
 		class="w-full rounded-md bg-zinc-800 p-2 outline-none color-white"
@@ -95,4 +95,8 @@
 			</div>
 		{/each}
 	{/if}
+</div>
+
+<div class="absolute bottom-0 bg-black w-full text-center py-2 opacity-50">
+	<a href="https://github.com/notnavindu/clickup-time-tracker"> Github </a>
 </div>

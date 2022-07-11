@@ -1,5 +1,9 @@
 import axios from 'axios';
-import { msToTime } from './helpers';
+import dayjs from 'dayjs';
+import duration from 'dayjs/plugin/duration';
+import { timeUnits } from './helpers';
+
+dayjs.extend(duration);
 
 export const getTrackedTime = async (
 	workspaceId: string,
@@ -23,15 +27,20 @@ export const getTrackedTime = async (
 			({ data }) => {
 				let itemList = data.data;
 
-				Object.keys(data.data).map((item) => {
-					durations[itemList[item].task_location.list_id] =
-						parseInt(itemList[item].duration) +
-						(durations[itemList[item].task_location.list_id] || 0);
+				let total = 0;
+
+				itemList.forEach((session) => {
+					total = total + parseInt(session.duration);
+
+					durations[session.task_location.list_id] =
+						parseInt(session.duration) + (durations[session.task_location.list_id] || 0);
 				});
 
 				Object.keys(durations).map((listId) => {
-					durations[listId] = msToTime(durations[listId]);
+					durations[listId] = timeUnits(durations[listId]);
 				});
+
+				console.log(durations);
 
 				return durations;
 			},

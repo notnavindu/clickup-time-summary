@@ -7,7 +7,6 @@ specifiers:
   '@typescript-eslint/parser': ^5.10.1
   autoprefixer: ^10.4.7
   axios: ^0.27.2
-  dayjs: ^1.11.3
   eslint: ^8.12.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^4.0.0
@@ -25,7 +24,6 @@ specifiers:
 
 dependencies:
   axios: 0.27.2
-  dayjs: 1.11.3
   flatpickr: 4.6.13
   svelte-flatpickr: 3.2.6_svelte@3.48.0
 
@@ -637,10 +635,6 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
     dev: true
-
-  /dayjs/1.11.3:
-    resolution: {integrity: sha512-xxwlswWOlGhzgQ4TKzASQkUhqERI3egRNqgV4ScR8wlANA/A9tZ7miXa44vTTKEq5l7vWoL5G57bG3zA+Kow0A==}
-    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}

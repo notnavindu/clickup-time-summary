@@ -34,7 +34,6 @@
 	"type": "module",
 	"dependencies": {
 		"axios": "^0.27.2",
-		"dayjs": "^1.11.3",
 		"flatpickr": "^4.6.13",
 		"svelte-flatpickr": "^3.2.6"
 	}

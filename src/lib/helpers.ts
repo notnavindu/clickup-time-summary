@@ -4,7 +4,7 @@
  * @param {int} ms - Amount of time measured in milliseconds
  * @return {?Object} Reallocated time units. NULL on failure.
  */
-export const timeUnits = (ms) => {
+export const timeUnits = (ms: number) => {
 	if (!Number.isInteger(ms)) {
 		return null;
 	}
@@ -13,7 +13,7 @@ export const timeUnits = (ms) => {
 	 * @param {int} msUnit - Size of a single unit in milliseconds
 	 * @return {int} Number of units taken from the time pool
 	 */
-	const allocate = (msUnit) => {
+	const allocate = (msUnit: number) => {
 		const units = Math.trunc(ms / msUnit);
 		ms -= units * msUnit;
 		return units;

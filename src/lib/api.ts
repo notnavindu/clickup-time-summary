@@ -1,9 +1,5 @@
 import axios from 'axios';
-import dayjs from 'dayjs';
-import duration from 'dayjs/plugin/duration';
 import { timeUnits } from './helpers';
-
-dayjs.extend(duration);
 
 export const getTrackedTime = async (
 	workspaceId: string,
@@ -29,7 +25,7 @@ export const getTrackedTime = async (
 
 				let total = 0;
 
-				itemList.forEach((session) => {
+				itemList.forEach((session: any) => {
 					total = total + parseInt(session.duration);
 
 					durations[session.task_location.list_id] =
